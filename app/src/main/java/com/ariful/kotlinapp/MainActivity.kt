@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
           //  result.setText("\ndqwdeqw\n32r23")
             Toast.makeText(applicationContext,"result "+Result,Toast.LENGTH_LONG).show()
             Log.e("Result rr ",Result.toString()+"qq "+first.text.toString().trim().toInt())
+            Log.e("Result rr ",Result.toString()+"qq "+first.text.toString().trim().toInt())
+            Log.e("Result rr ",Result.toString()+"qq "+first.text.toString().trim().toInt())
         }
     }
 
