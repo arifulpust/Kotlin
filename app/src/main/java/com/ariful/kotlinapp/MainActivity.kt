@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
             Log.e("Result rr ",Result.toString()+"qq "+first.text.toString().trim().toInt())
             Log.e("Result rr ",Result.toString()+"qq "+first.text.toString().trim().toInt())
             Log.e("Result rr ",Result.toString()+"qq "+first.text.toString().trim().toInt())
+            Log.e("Result rr ",Result.toString()+"qq "+first.text.toString().trim().toInt())
+            Log.e("Result rr ",Result.toString()+"qq "+first.text.toString().trim().toInt())
         }
     }
 
