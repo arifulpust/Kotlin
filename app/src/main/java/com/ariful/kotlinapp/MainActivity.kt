@@ -9,28 +9,38 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import butterknife.*
+import com.ariful.kotlinapp.list.RecyclearViewActivity
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var unbinder:Unbinder
+    @BindView(R.id.simpleOperation)
+    lateinit var simpleOperation: Button
+    @BindView(R.id.JavaInKotlin)
+    lateinit var JavaInKotlin: Button
+    @BindView(R.id.pdfFile)
+    lateinit var pdfFile: Button
+    @BindView(R.id.recyclearView)
+    lateinit var recyclearView: Button
+    //recyclearView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-       // unbinder= ButterKnife.bind(this)
-        val simpleOperation = findViewById<Button>(R.id.simpleOperation)
-        val JavaInKotlin = findViewById<Button>(R.id.JavaInKotlin)
-        val pdfFile = findViewById<Button>(R.id.pdfFile)
-
-
-        simpleOperation.setOnClickListener {
+ButterKnife.bind(this)
+        simpleOperation?.setOnClickListener {
             val changePage = Intent(this, SimpleOperation::class.java)
             startActivity(changePage)
         }
-        JavaInKotlin.setOnClickListener {
+        JavaInKotlin?.setOnClickListener {
             val changePage = Intent(this, ButterKnifeTest::class.java)
             startActivity(changePage)
         }
-        pdfFile.setOnClickListener {
+        pdfFile?.setOnClickListener {
             val changePage = Intent(this, CreateAndViewPdfFile::class.java)
+            startActivity(changePage)
+        }
+        recyclearView?.setOnClickListener {
+            val changePage = Intent(this, RecyclearViewActivity::class.java)
             startActivity(changePage)
         }
 
@@ -39,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-       // unbinder.unbind()
+        unbinder.unbind()
 
     }
 }
