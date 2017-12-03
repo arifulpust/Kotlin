@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ariful.kotlinapp">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <application
 
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -22,10 +22,14 @@
         </activity>
         <activity android:name=".SimpleOperation" />
         <activity android:name=".ButterKnifeTest" />
-        <activity android:name=".CreateAndViewPdfFile"></activity>
-        <activity android:name=".PDFViewActivity"></activity>
-        <activity android:name=".list.RecyclearViewActivity"></activity>
-        <activity android:name=".album.LaunchActivity"></activity>
+        <activity android:name=".CreateAndViewPdfFile" />
+        <activity android:name=".PDFViewActivity" />
+        <activity android:name=".list.RecyclearViewActivity" />
+        <activity android:name=".album.LaunchActivity" />
+        <activity
+            android:name=".retrofit.RetrofitTest"
+            android:label="@string/title_activity_retrofit_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

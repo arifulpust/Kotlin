@@ -18,10 +18,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
  * Created by Dream71 on 03/12/2017.
  */
 
-class ImageAdapter(var context:  Context, val userList: List<AlbumDto>) : RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
+class ImageAdapter(var context:  Context, val userList: List<Image>) : RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder?, p1: Int) {
-        val user: AlbumDto = userList[p1]
+        val user: Image = userList[p1]
 
         Log.e("user",""+user.title+" "+user.thumbnailUrl);
         //holder?.photoThumbnail?.text = user.name

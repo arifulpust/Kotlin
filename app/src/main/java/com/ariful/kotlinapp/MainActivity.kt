@@ -11,7 +11,8 @@ import android.widget.Toast
 import butterknife.*
 import com.ariful.kotlinapp.album.LaunchActivity
 import com.ariful.kotlinapp.list.RecyclearViewActivity
-
+import com.ariful.kotlinapp.retrofit.RetrofitActivity
+import com.ariful.kotlinapp.retrofit.RetrofitTest
 
 class MainActivity : AppCompatActivity() {
     lateinit var unbinder:Unbinder
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var JavaInKotlin: Button
     @BindView(R.id.pdfFile)
     lateinit var pdfFile: Button
+
+    //retrofit
     @BindView(R.id.recyclearView)
     lateinit var recyclearView: Button
     @BindView(R.id.Retrofit)
@@ -47,7 +50,9 @@ ButterKnife.bind(this)
             startActivity(changePage)
         }
         Retrofit?.setOnClickListener {
-            val changePage = Intent(this, LaunchActivity::class.java)
+           val changePage = Intent(this, LaunchActivity::class.java)
+           // val changePage = Intent(this, RetrofitActivity::class.java)
+          //  val changePage = Intent(this, RetrofitTest::class.java)
             startActivity(changePage)
         }
         //LaunchActivity
