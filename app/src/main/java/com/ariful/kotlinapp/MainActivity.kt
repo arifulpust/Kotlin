@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import butterknife.*
+import com.ariful.kotlinapp.album.LaunchActivity
 import com.ariful.kotlinapp.list.RecyclearViewActivity
 
 
@@ -22,7 +23,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var pdfFile: Button
     @BindView(R.id.recyclearView)
     lateinit var recyclearView: Button
-    //recyclearView
+    @BindView(R.id.Retrofit)
+    lateinit var Retrofit: Button
+    //Retrofit
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -43,6 +46,11 @@ ButterKnife.bind(this)
             val changePage = Intent(this, RecyclearViewActivity::class.java)
             startActivity(changePage)
         }
+        Retrofit?.setOnClickListener {
+            val changePage = Intent(this, LaunchActivity::class.java)
+            startActivity(changePage)
+        }
+        //LaunchActivity
 
     }
 
